@@ -1,0 +1,28 @@
+{
+  "type": "object",
+  "properties": {
+    "istioonmesos-etcd": {
+      "type": "object",
+      "description": "00-IstioOnMesos etcd",
+      "properties": {
+        "name": {
+          "description": "The name of the etcd instance",
+          "type": "string",
+          "default": "/etcd"
+        },
+        "cpus": {
+          "description": "CPU shares to allocate to each etcd instance.",
+          "type": "number",
+          "default": 0.5,
+          "minimum": 0.5
+        },
+        "mem": {
+          "description":  "Memory to allocate to each etcd instance.",
+          "type": "number",
+          "default": 512.0,
+          "minimum": 258.0
+        }
+      }
+    }
+  }
+}
