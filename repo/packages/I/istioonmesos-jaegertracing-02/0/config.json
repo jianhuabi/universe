@@ -1,0 +1,33 @@
+{
+  "type": "object",
+  "properties": {
+    "istioonmesos-jaeger": {
+      "type": "object",
+      "description": "02-IstioOnMesos jaeger-tracing",
+      "properties": {
+        "name": {
+          "description": "The name of the jaeger-tracing instance",
+          "type": "string",
+          "default": "/zipkin"
+        },
+        "cpus": {
+          "description": "CPU shares to allocate to each apiserver instance.",
+          "type": "number",
+          "default": 0.5,
+          "minimum": 0.3
+        },
+        "mem": {
+          "description":  "Memory to allocate to each apiserver instance.",
+          "type": "number",
+          "default": 1024.0,
+          "minimum": 512.0
+        },
+        "l_haproxy_group": {
+          "description": "Haproxy Group Label.",
+          "type": "string",
+          "default": "external"
+        }
+      }
+    }
+  }
+}
