@@ -1,8 +1,11 @@
 {
   "assets": {
+    "uris": {
+      "prometheus-properties": "https://raw.githubusercontent.com/harryge00/mylinuxrc/master/dcos/istio/install/prometheus-mesos.yaml"
+    },
     "container": {
       "docker": {
-        "jaegertracing": "jaegertracing/all-in-one:1.5"
+        "prometheus": "prom/prometheus:v2.3.1"
       }
     }
   },

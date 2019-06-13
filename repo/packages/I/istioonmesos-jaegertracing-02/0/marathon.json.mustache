@@ -10,14 +10,14 @@
       "*"
     ],
     "labels": {
-        "HAPROXY_GROUP": "{{istioonmesos-jaeger.l_haproxy_group}",
+        "HAPROXY_GROUP": "{{istioonmesos-jaeger.l_haproxy_group}}",
         "HAPROXY_0_VHOST": ""
     },
     "container": {
       "type": "DOCKER",
       "docker": {
         "forcePullImage": false,
-        "image": "jaegertracing/all-in-one:1.5",
+        "image": "{{resource.assets.container.docker.jaegertracing}}",
         "parameters": [],
         "privileged": false
       },

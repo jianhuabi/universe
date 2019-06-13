@@ -1,0 +1,39 @@
+{
+  "type": "object",
+  "properties": {
+    "istioonmesos-pilot": {
+      "type": "object",
+      "description": "04-IstioOnMesos Istio-Pilot",
+      "properties": {
+        "name": {
+          "description": "The name of the pilot instance",
+          "type": "string",
+          "default": "/pilot"
+        },
+        "cpus": {
+          "description": "CPU shares to allocate to each pilot instance.",
+          "type": "number",
+          "default": 2,
+          "minimum": 1
+        },
+        "mem": {
+          "description":  "Memory to allocate to each pilot instance.",
+          "type": "number",
+          "default": 2048.0,
+          "minimum": 1024.0
+        },
+        "instances": {
+          "description":  "istio-pilot instances number to support HA setup.",
+          "type": "number",
+          "default": 1,
+          "minimum": 1
+        },
+        "l_haproxy_group": {
+          "description": "Haproxy Group Label.",
+          "type": "string",
+          "default": "external"
+        }
+      }
+    }
+  }
+}

@@ -1,8 +1,12 @@
 {
   "assets": {
+    "uris": {
+      "kubeconfig": "https://s3-ap-southeast-1.amazonaws.com/marathon-cmd/kubeconfig",
+      "meshconfig": "https://s3-ap-southeast-1.amazonaws.com/marathon-cmd/mesh"
+    },
     "container": {
       "docker": {
-        "jaegertracing": "jaegertracing/all-in-one:1.5"
+        "pilot": "hyge/pilot:eds"
       }
     }
   },

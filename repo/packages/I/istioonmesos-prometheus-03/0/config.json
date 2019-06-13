@@ -1,23 +1,23 @@
 {
   "type": "object",
   "properties": {
-    "istioonmesos-jaeger": {
+    "istioonmesos-prometheus": {
       "type": "object",
-      "description": "02-IstioOnMesos jaeger-tracing",
+      "description": "03-IstioOnMesos prometheus",
       "properties": {
         "name": {
-          "description": "The name of the jaeger-tracing instance",
+          "description": "The name of the prometheus instance",
           "type": "string",
-          "default": "/zipkin"
+          "default": "/prometheus"
         },
         "cpus": {
-          "description": "CPU shares to allocate to each jaeger-tracing instance.",
+          "description": "CPU shares to allocate to each prometheus instance.",
           "type": "number",
           "default": 0.5,
           "minimum": 0.3
         },
         "mem": {
-          "description":  "Memory to allocate to each jaeger-tracing instance.",
+          "description":  "Memory to allocate to each prometheus instance.",
           "type": "number",
           "default": 1024.0,
           "minimum": 512.0

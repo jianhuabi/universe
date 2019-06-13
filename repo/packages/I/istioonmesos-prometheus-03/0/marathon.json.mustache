@@ -1,0 +1,50 @@
+{
+    "id": "{{istioonmesos-prometheus.name}}",
+    "cmd": "/bin/prometheus --storage.tsdb.retention=6h  --config.file=/mnt/mesos/sandbox/prometheus-mesos.yaml --log.level=debug",
+    "cpus": {{istioonmesos-prometheus.cpus}},
+    "mem": {{istioonmesos-prometheus.mem}},
+    "disk": 0,
+    "instances": 1,
+    "portDefinitions": [],
+    "acceptedResourceRoles": [
+      "*"
+    ],
+    "container": {
+      "type": "MESOS",
+      "docker": {
+        "forcePullImage": false,
+        "image": "{{resource.assets.container.docker.prometheus}}",
+        "parameters": [],
+        "privileged": false
+      },
+      "volumes": [],
+      "portMappings": [
+        {
+          "containerPort": 9090,
+          "hostPort": 31909,
+          "labels": {},
+          "name": "prometheus",
+          "protocol": "tcp",
+          "servicePort": 10003
+        }
+      ]
+    },
+    "fetch": [
+      {
+        "uri": "{{resource.assets.uris.prometheus-properties}}",
+        "extract": false,
+        "executable": false,
+        "cache": false
+      }
+    ],
+    "labels": {
+        "app": "prometheus",
+        "HAPROXY_GROUP": "{{istioonmesos-jaeger.l_haproxy_group}}",
+        "HAPROXY_0_VHOST": ""
+    },
+    "networks": [
+      {
+        "mode": "container/bridge"
+      }
+    ]
+}

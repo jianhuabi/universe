@@ -1,0 +1,17 @@
+{
+  "description": "Istio configuration yamls like Gateway, VirtualService, DestinationRule, ServiceEntry etc. requires k8s apiserver which accepts yamls requests and stores/persists it to etcd store.\n\nInstallation Documentation:\n\nhttps://hackmd.io/2x2RyuOZS3SUx_n5gTA4cQ",
+  "framework": false,
+  "maintainer": "https://dcos.io/community/",
+  "minDcosReleaseVersion": "1.8",
+  "name": "istioonmesos-pilot-04",
+  "packagingVersion": "3.0",
+  "preInstallNotes": "This DC/OS Service is currently in preview. There may be bugs, incomplete features, incorrect documentation, or other discrepancies. Preview packages should never be used in production!",
+  "postInstallNotes": "DC/OS istioonmesos pilot  is being installed!\n\n\tDocumentation: https://hackmd.io/2x2RyuOZS3SUx_n5gTA4cQ",
+  "postUninstallNotes": "DC/OS istioonmesos pilot has been uninstalled.",
+  "selected": false,
+  "tags": [
+    "istioonmesos",
+    "etcd"
+  ],
+  "version": "0.1.0"
+}
