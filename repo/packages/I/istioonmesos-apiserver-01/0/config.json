@@ -1,0 +1,38 @@
+{
+  "type": "object",
+  "properties": {
+    "istioonmesos-apiserver": {
+      "type": "object",
+      "description": "01-IstioOnMesos apiserver",
+      "properties": {
+        "name": {
+          "description": "The name of the apiserver instance",
+          "type": "string",
+          "default": "/apiserver"
+        },
+        "cpus": {
+          "description": "CPU shares to allocate to each apiserver instance.",
+          "type": "number",
+          "default": 0.3,
+          "minimum": 0.1
+        },
+        "mem": {
+          "description":  "Memory to allocate to each apiserver instance.",
+          "type": "number",
+          "default": 512.0,
+          "minimum": 258.0
+        },
+        "etcd_conf": {
+          "description": "etcd domain uris.",
+          "type": "string",
+          "default": "etcd.marathon.slave.mesos"
+        },
+        "l_haproxy_group": {
+          "description": "Haproxy Group Label.",
+          "type": "string",
+          "default": "external"
+        }
+      }
+    }
+  }
+}
