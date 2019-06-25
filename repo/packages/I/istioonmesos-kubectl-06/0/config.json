@@ -1,0 +1,39 @@
+{
+  "type": "object",
+  "properties": {
+    "istioonmesos-kubectl": {
+      "type": "object",
+      "description": "06-IstioOnMesos Istio-kubectl",
+      "properties": {
+        "name": {
+          "description": "The name of the kubectl instance",
+          "type": "string",
+          "default": "/kubectl"
+        },
+        "cpus": {
+          "description": "CPU shares to allocate to each kubectl instance.",
+          "type": "number",
+          "default": 0.5,
+          "minimum": 0.3
+        },
+        "mem": {
+          "description":  "Memory to allocate to each kubectl instance.",
+          "type": "number",
+          "default": 1024.0,
+          "minimum": 1024.0
+        },
+        "instances": {
+          "description":  "istio-kubectl instances number to support HA setup.",
+          "type": "number",
+          "default": 1,
+          "minimum": 1
+        },
+        "l_haproxy_group": {
+          "description": "Haproxy Group Label.",
+          "type": "string",
+          "default": "external"
+        }
+      }
+    }
+  }
+}

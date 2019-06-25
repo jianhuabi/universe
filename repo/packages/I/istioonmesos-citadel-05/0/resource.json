@@ -1,0 +1,18 @@
+{
+  "assets": {
+    "uris": {
+      "kubeconfig": "https://s3-ap-southeast-1.amazonaws.com/marathon-cmd/kubeconfig",
+      "meshconfig": "https://s3-ap-southeast-1.amazonaws.com/marathon-cmd/mesh"
+    },
+    "container": {
+      "docker": {
+        "citadel": "michaelbi/citadel-test:1.0.5"
+      }
+    }
+  },
+  "images": {
+    "icon-small": "https://downloads.mesosphere.com/assets/universe/000/httpbin-icon-small.png",
+    "icon-medium": "https://downloads.mesosphere.com/assets/universe/000/httpbin-icon-medium.png",
+    "icon-large": "https://downloads.mesosphere.com/assets/universe/000/httpbin-icon-large.png"
+  }
+}

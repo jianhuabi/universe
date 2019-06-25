@@ -1,0 +1,39 @@
+{
+  "type": "object",
+  "properties": {
+    "istioonmesos-citadel": {
+      "type": "object",
+      "description": "05-IstioOnMesos Istio-citadel",
+      "properties": {
+        "name": {
+          "description": "The name of the citadel instance",
+          "type": "string",
+          "default": "/citadel"
+        },
+        "cpus": {
+          "description": "CPU shares to allocate to each citadel instance.",
+          "type": "number",
+          "default": 1,
+          "minimum": 1
+        },
+        "mem": {
+          "description":  "Memory to allocate to each citadel instance.",
+          "type": "number",
+          "default": 1024.0,
+          "minimum": 1024.0
+        },
+        "instances": {
+          "description":  "istio-pilot instances number to support HA setup.",
+          "type": "number",
+          "default": 1,
+          "minimum": 1
+        },
+        "l_haproxy_group": {
+          "description": "Haproxy Group Label.",
+          "type": "string",
+          "default": "external"
+        }
+      }
+    }
+  }
+}
